@@ -19,6 +19,22 @@ This project implements a **European call option pricing engine** using the **Co
 
 ---
 
+## 📐 Advanced Insight – Richardson Extrapolation & Tilted Trees
+
+In addition to implementing the CRR binomial tree and Black-Scholes models, this project explores the convergence behavior of option price estimates under different numerical settings.
+
+I observed that:
+- When the number of time steps \( M \) is **odd**, the CRR model tends to **overestimate** the option value.
+- When \( M \) is **even**, it tends to **underestimate** the true price.
+
+Based on this, I proposed a **modified Richardson extrapolation approach** that separately handles odd and even \( M \), accelerating convergence by eliminating the dominant error terms.
+
+> 📌 This idea is inspired by numerical error theory and supported by plotted convergence curves showing improved accuracy with increasing \( M \).
+
+This enhancement demonstrates how tailored numerical methods can improve both **efficiency and stability** in option pricing models.
+
+---
+
 ## 📦 Technologies Used
 
 - Python 3
